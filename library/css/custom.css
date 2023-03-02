@@ -1,0 +1,306 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#mobile-header{
+    display: none; /*wyłączenie widoku w desktop*/
+}
+
+.header-custom{
+    /* background-color:red; */
+    /* opacity: 0.5; */
+    position:sticky;
+    top:0;
+    color: black;
+    z-index: 999;  
+}
+.header{
+   transition:background-color 2s  ease-in-out;
+   
+}
+.header-grid{
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "pierwsze srodek drugie";
+    align-items: center;
+   
+}
+.nav li a{
+    color: black;
+  
+}
+.main{
+    grid-area:pierwsze;
+}
+.main-secondary{
+    grid-area: drugie;
+    
+}
+.logo{
+    grid-area: srodek;
+    text-align: center;
+}
+/* zmiana stylowania wyświetlania postów na stronie */
+.worcar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    background-color: red;
+    padding: 10px;
+}
+.abc{
+    margin-left: 5px;
+}
+
+
+
+
+
+/* ================ */
+/* style dla slider */
+/* ================ */
+#slider{
+    height: 450px;
+}
+.content{
+    margin-left: 8%;
+    margin-top: 15%;
+    }
+    #p-slider{
+     margin-left: 60px;
+    }
+   #p-slider::before{
+        display: block;
+        content: '';
+        width: 50px;
+        height: 5px;
+        border-radius: 5px;
+        background-color: red;
+        position: relative;
+        left: -60px;
+        top: 15px;
+      
+    }
+.content h1{
+    font-size: 54px;
+    margin-top: 5px;
+    margin-bottom: 18px;
+    z-index: 20;
+}
+.content h1 span{
+    color: red;
+    font-weight: 900;
+    z-index: 100;
+    text-transform: uppercase;
+}
+.content p{
+    line-height: 22px;
+}
+.content a{
+    background: black;
+    color:white;
+    line-height: 24px;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 30px 0;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.imgbox{
+    position: absolute;
+    right: 80px;
+    top: 270px;
+    width: 30%;
+    transition: 1s all;
+    /* filter: blur(2px);
+    opacity: 0.5; */
+}
+.imgbox:hover{
+    transition: 1s all;
+    transform: rotate(3deg);
+  cursor: pointer;
+}
+.img-tlo{
+    position: absolute;
+    right: 80px;
+    top: 200px;
+    width: 30%;
+    z-index: -1;
+    
+}
+
+/* .conteiner-fluid h1 {
+    position: absolute;
+    top: 20vh;
+    left: 5vw;
+    border-left: 5px solid white;
+    font-size: 5vw;
+    color: white;
+}
+.conteiner-fluid p{
+    position: absolute;
+    top: 50vh;
+    left: 5vw;
+    border-left: 5px solid white;
+} */
+
+
+/* =============================== */
+/* style dla section class="quote" */
+/* =============================== */
+.quotes{
+    height: auto;
+    padding: 2em;
+    background-color: burlywood;
+    text-align: center;
+    text-transform: uppercase;
+}
+/* =============================== */
+/* =============================== */
+/* style dla section id="slider" */
+/* =============================== */
+
+.worcar-row{
+    display: flex;
+    height: 250px;
+    color: black;
+    text-align: center;
+    align-items: center;
+}
+
+/* ================================================ */
+
+
+/* =============================== */
+/* style dla section id="about" */
+/* =============================== */
+section.container{
+    margin-top: 4em;
+}
+.container{
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card{
+    background-color: white;
+    width: 270px;
+    height: auto;
+    margin: 10px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px 5px;
+    text-align: center;
+}
+.card > h1 {
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+    background: rgb(191, 15, 15);
+    border-radius: 25%;
+}
+
+.card-image{
+    background-color: aqua;
+    height: 400px;
+    margin-bottom: 15px;
+    border-radius: 25px 25px 0 0;
+    /* clip-path: path('M 0 200 L 0,75 A 5,5 0,0,1 150,100 L 270 200 z'); */
+    background-size: cover;
+}
+.car-1{
+    background-image: url('../images/pexels-kyle-karbowski-9700586-768x1152.jpg');
+}
+.car-2{
+    background-image: url('../images/pexels-alleksana-10610441-200x300.jpg');
+}
+.car-3{
+    /* background-image: url('../images/pexels-vlada-karpovich-9969158-1024x1536.jpg'); */
+    background-image: url('../../../../../uploads/2022/10/pexels-vlada-karpovich-9969158.jpg');
+  
+}
+
+.card-button{
+    width: 100%;
+    /* margin: 25px; */
+    padding: 1em;
+    display: block;
+    background: black;
+    color: white;
+    border-radius:0 0 25px 25px;
+}
+a{
+    text-decoration: none !important;
+}
+.card-button:hover {
+    position: relative;
+    width: 100%;
+    padding: 1em;
+    display: block;
+    background: black;
+    color: white;
+    border-radius:0 0 25px 25px;
+    
+}
+
+
+/* style dla divu social */
+.social{
+    position: fixed;
+    top: 200px;
+    right:-100px;
+    width: 100px;
+    height: 100px;  
+    background-image: url('../../../../../uploads/2022/10/pexels-vlada-karpovich-9969158-scaled.jpg');
+    transition: all 0.3s ease-out;
+    object-fit: cover;
+}
+.social:hover{
+    top:200px ;
+    right:10px ;
+    transition: all 0.3s ease-out;
+}
+.social::before{
+    position: relative;
+    left: -40px;
+    content: '';
+    display:block;
+    width:40px;
+    height: 40px;
+    background-color: black;
+    border-radius:10px 0 0 10px ;
+}
+.social:hover::before{
+    position: relative;
+    left: -40px;
+    content: '';
+    display:block;
+    width:40px;
+    height: 40px;
+    background-color: black;
+    border-radius:10px 0 0 10px ;
+}
+
+
+  
+/* inne widoki mobilne */
+@media only screen and (max-width: 481px) {
+    .main,.main-secondary,.logo{
+        display: none;
+    }
+    .worcar{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        background-color: red;
+        padding: 10px;
+    }
+}
+/* ============================================== */
